@@ -1,6 +1,6 @@
-package com.example.registrationlogindemo.repository;
+package ru.perm.v.registrationlogindemo.repository;
 
-import com.example.registrationlogindemo.entity.Role;
+import ru.perm.v.registrationlogindemo.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {

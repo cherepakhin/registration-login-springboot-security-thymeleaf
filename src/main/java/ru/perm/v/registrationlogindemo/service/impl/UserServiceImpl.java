@@ -1,11 +1,11 @@
-package com.example.registrationlogindemo.service.impl;
+package ru.perm.v.registrationlogindemo.service.impl;
 
-import com.example.registrationlogindemo.dto.UserDto;
-import com.example.registrationlogindemo.entity.Role;
-import com.example.registrationlogindemo.entity.User;
-import com.example.registrationlogindemo.repository.RoleRepository;
-import com.example.registrationlogindemo.repository.UserRepository;
-import com.example.registrationlogindemo.service.UserService;
+import ru.perm.v.registrationlogindemo.dto.UserDto;
+import ru.perm.v.registrationlogindemo.entity.Role;
+import ru.perm.v.registrationlogindemo.entity.User;
+import ru.perm.v.registrationlogindemo.repository.RoleRepository;
+import ru.perm.v.registrationlogindemo.repository.UserRepository;
+import ru.perm.v.registrationlogindemo.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

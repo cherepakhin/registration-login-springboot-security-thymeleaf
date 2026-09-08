@@ -1,4 +1,4 @@
-package com.example.registrationlogindemo;
+package ru.perm.v.registrationlogindemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

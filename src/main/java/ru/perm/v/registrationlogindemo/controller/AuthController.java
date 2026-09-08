@@ -1,8 +1,8 @@
-package com.example.registrationlogindemo.controller;
+package ru.perm.v.registrationlogindemo.controller;
 
-import com.example.registrationlogindemo.dto.UserDto;
-import com.example.registrationlogindemo.entity.User;
-import com.example.registrationlogindemo.service.UserService;
+import ru.perm.v.registrationlogindemo.dto.UserDto;
+import ru.perm.v.registrationlogindemo.entity.User;
+import ru.perm.v.registrationlogindemo.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

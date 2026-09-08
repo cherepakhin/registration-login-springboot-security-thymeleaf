@@ -1,8 +1,8 @@
-package com.example.registrationlogindemo.security;
+package ru.perm.v.registrationlogindemo.security;
 
-import com.example.registrationlogindemo.entity.Role;
-import com.example.registrationlogindemo.entity.User;
-import com.example.registrationlogindemo.repository.UserRepository;
+import ru.perm.v.registrationlogindemo.entity.Role;
+import ru.perm.v.registrationlogindemo.entity.User;
+import ru.perm.v.registrationlogindemo.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package com.example.registrationlogindemo.entity;
+package ru.perm.v.registrationlogindemo.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

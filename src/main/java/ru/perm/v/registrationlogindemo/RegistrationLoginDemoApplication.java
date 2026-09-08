@@ -1,4 +1,4 @@
-package com.example.registrationlogindemo;
+package ru.perm.v.registrationlogindemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
