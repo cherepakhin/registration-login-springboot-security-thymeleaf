@@ -10,11 +10,11 @@ Database spring.datasource.url=jdbc:mysql://v:3306/login_system
 spring.datasource.username=vasi
 spring.datasource.password=pass
 
-![doc/login_fail.png](doc/login_fail.png) 
+![doc/registration.png](doc/registration.png) 
 
 ![doc/login_form.png](doc/login_form.png) 
 
-![doc/registration.png](doc/registration.png) 
+![doc/login_fail.png](doc/login_fail.png) 
 
 
 # Updated to Spring Boot 3 and Spring Security 8
