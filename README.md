@@ -83,18 +83,18 @@ Registration:
 ![doc/registration.png](doc/registration.png)
 
 Login form:
-[http://127.0.0.1:8080/login](http://127.0.0.1:8080/login)
+[http://127.0.0.1:8089/registration/login](http://127.0.0.1:8089/registration/login)
 
 ![doc/login_form.png](doc/login_form.png)
 
 Login error:
-[http://127.0.0.1:8080/login?error](http://127.0.0.1:8080/login?error)
+[http://127.0.0.1:8089/registration/login?error](http://127.0.0.1:8089/registration/login?error)
 
 ![doc/login_fail.png](doc/login_fail.png)
 
 Show users if login OK:
 
-[http://127.0.0.1:8080/users](http://127.0.0.1:8080/users)
+[http://127.0.0.1:8089/registration/users](http://127.0.0.1:8089/registration/users)
 
 ![doc/users_if_logged.png](doc/users_if_logged.png)
 
@@ -139,7 +139,7 @@ Start service:
 systemctl start registration-login-demo
 ````
 
-[http://v:8089/login](http://v:8089/login)
+[http://v:8089/registration/login](http://v:8089/registration/login)
 
 Stop service:
 ````shell
