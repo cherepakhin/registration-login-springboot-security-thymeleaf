@@ -6,6 +6,7 @@
 [Maven wrapper setup](#maven_wrapper_setup)<br/>
 [Config database](#config_database)<br/>
 [Run](#run)<br/>
+[Package FAT JAR](#fat_jar)<br/>
 [Use](#use)<br/>
 [Example Spring Boot 3 and Spring Security 8](#example_spring_boot_3)<br/>
 
@@ -49,6 +50,20 @@ spring.datasource.password=pass
 ### Run
 
 [./run.sh](run.sh):
+
+<a id="fat_jar"></a>
+### Package FAT JAR
+
+````shell
+./mvnw clean package
+````
+
+Run FAT JAR:
+
+````shell
+export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+/usr/lib/jvm/java-17-openjdk-amd64/bin/java -jar target/registration-login-demo-0.0.1-SNAPSHOT.jar
+````
 
 <a id="use"></a>
 ### Use
