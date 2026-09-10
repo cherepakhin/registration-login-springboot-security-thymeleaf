@@ -4,36 +4,110 @@
 >
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration and Login System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #212529;
+            transition: left 0.3s ease;
+            z-index: 1050;
+            padding-top: 60px;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #bdc1c6;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+            background-color: #343a40;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 36px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1040;
+        }
+        .overlay.active {
+            display: block;
+        }
+        .navbar-custom {
+            background-color: #212529;
+            padding: 10px 15px;
+        }
+        .navbar-custom .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .navbar-custom .brand {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Registration and Login System</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" th:href="@{/register}">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" th:href="@{/login}">Login</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <a th:href="@{/register}" onclick="closeSidebar()">Register</a>
+    <a th:href="@{/login}" onclick="closeSidebar()">Login</a>
+</div>
+
+<nav class="navbar-custom">
+    <button class="menu-btn" onclick="openSidebar()">&#9776;</button>
+    <span class="brand">Registration and Login System</span>
 </nav>
+
 <div class="container">
     <div class="row">
         <h1 class="text-center"> Welcome to Registration and Login System</h1>
         <a class="text-center" href="https://github.com/cherepakhin/registration-login-springboot-security-thymeleaf" target="_blank">Details see on GitHub https://github.com/cherepakhin/registration-login-springboot-security-thymeleaf</a>
     </div>
 </div>
+
+<script>
+    function openSidebar() {
+        document.getElementById('sidebar').classList.add('active');
+        document.getElementById('overlay').classList.add('active');
+    }
+    function closeSidebar() {
+        document.getElementById('sidebar').classList.remove('active');
+        document.getElementById('overlay').classList.remove('active');
+    }
+</script>
+
 </body>
 </html>
