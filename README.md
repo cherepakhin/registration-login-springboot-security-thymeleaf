@@ -1,14 +1,61 @@
-### Registration, Login with Spring MVC, MySql 
+## Registration, Login with Spring MVC, MySql 
+
+### Content:
+
+[Requirements](#requirements)<br/>
+[Maven wrapper setup](#maven_wrapper_setup)<br/>
+[Config database](#config_database)<br/>
+[Run](#run)<br/>
+[Use](#use)<br/>
+[Example Spring Boot 3 and Spring Security 8](#example_spring_boot_3)<br/>
+
+<a id="requirements"></a>
+### Requirements
 
 Used Java 17, database MySql, name database __login_system__.
 
 No unit tests.
 
-[./run.sh](run.sh):
+Users/pass:
+
+| User              | Password |
+|-------------------|----------|
+| ivan@example.com  | pass     |
+| ivan@ya.ru        | pass     |
+
+<a id="maven_wrapper_setup"></a>
+### Setup Maven wrapper
+
+Generate version 3.6.3:
 
 ````shell
 export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
-./mvnw spring-boot:run
+mvn -N wrapper:wrapper -Dmaven=3.6.3
+./mvnw clean package
+````
+
+<a id="config_database"></a>
+### Config database
+
+Set database in application.properties:
+
+````yaml
+spring.datasource.url=jdbc:mysql://v:3306/login_system
+spring.datasource.username=vasi
+spring.datasource.password=pass
+````
+
+<a id="run"></a>
+### Run
+
+[./run.sh](run.sh):
+
+<a id="use"></a>
+### Use
+
+````shell
+export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+./mvnw clean spring-boot:run
 ````
 Registration:
 ![doc/registration.png](doc/registration.png)
@@ -29,21 +76,9 @@ Show users if login OK:
 
 ![doc/users_if_logged.png](doc/users_if_logged.png)
 
-Users/pass:
+<a id="example_spring_boot_3"></a>
+### Example Spring Boot 3 and Spring Security 8
 
-| User              | Password |
-|-------------------|----------|
-| ivan@example.com  | pass     |
-| ivan@ya.ru        | pass     |
-
-
-
-Database spring.datasource.url=jdbc:mysql://v:3306/login_system
-spring.datasource.username=vasi
-spring.datasource.password=pass
-
-# Updated to Spring Boot 3 and Spring Security 8
-registration-login-module using springboot, spring mvc, spring security and thymeleaf
+Registration-login-module using springboot, spring mvc, spring security and thymeleaf
 
 http://www.javaguides.net/2018/10/user-registration-module-using-springboot-springmvc-springsecurity-hibernate5-thymeleaf-mysql.html
-
