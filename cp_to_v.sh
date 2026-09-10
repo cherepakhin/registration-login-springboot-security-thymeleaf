@@ -1,0 +1,1 @@
+scp ./target/registration-login-demo-0.0.1.jar vasi@v:/home/vasi/po
