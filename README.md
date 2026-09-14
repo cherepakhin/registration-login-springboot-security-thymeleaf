@@ -138,6 +138,7 @@ Start service:
 ````shell
 systemctl start registration-login-demo
 ````
+[http://v:8089/registration/](http://v:8089/registration/)
 
 [http://v:8089/registration/login](http://v:8089/registration/login)
 
@@ -157,3 +158,22 @@ systemctl status registration-login-demo
 Registration-login-module using springboot, spring mvc, spring security and thymeleaf
 
 http://www.javaguides.net/2018/10/user-registration-module-using-springboot-springmvc-springsecurity-hibernate5-thymeleaf-mysql.html
+
+### Setup Apache2
+
+/etc/apache2/sites-enabled# cat 000-default-le-ssl.conf:
+
+````text
+<IfModule mod_ssl.c>
+    <VirtualHost *:443>
+    ....
+	#demo registration
+	ProxyPass        /registration http://192.168.1.20:8089/registration
+	ProxyPassReverse /registration http://192.168.1.20:8089/registration
+    ....
+	ProxyPreserveHost On
+    </VirtualHost>
+</IfModule>
+````
+
+After restart apache2 service will be available [https://v.perm.ru/registration/](https://v.perm.ru/registration/).
